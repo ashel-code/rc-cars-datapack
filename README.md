@@ -1,5 +1,6 @@
 # rc-cars-datapack
- 
+<h1> made by Erendel </h1>
+
 Рецепт крафта красной машины:
 <img width="124" alt="image" src="https://user-images.githubusercontent.com/71406528/131192487-c826fca1-d15e-4f31-878c-d3afde1e21fd.png">
 
