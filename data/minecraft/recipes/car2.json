@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L ",
+        "#RD",
+        "#M#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:light_blue_concrete"
+        },
+        "L": {
+            "item": "minecraft:red_stained_glass_pane"
+        },
+        "R": {
+            "item": "minecraft:redstone_block"
+        },
+        "D": {
+            "item": "minecraft:dispenser"
+        },
+        "M": {
+            "item": "minecraft:minecart"
+        }
+    },
+    "result": {
+        "item": "minecraft:blue_orchid",
+        "count": 1
+    }
+}

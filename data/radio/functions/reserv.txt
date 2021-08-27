@@ -1,0 +1,27 @@
+#Movement
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:0}] at @s run execute as @e[tag=car] at @s run data modify entity @s Motion set value [0.5,0.0,0.0]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:0}] at @s run execute as @e[tag=car] at @s run data modify entity @s Rotation set value [-90f,0f]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:2}] at @s run execute as @e[tag=car] at @s run data modify entity @s Motion set value [-0.5,0.0,0.0]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:2}] at @s run execute as @e[tag=car] at @s run data modify entity @s Rotation set value [90f,0f]
+execute as @a[scores={radio=1..,}, nbt={SelectedItemSlot:1}] at @s run execute as @e[tag=car] at @s run data modify entity @s Motion set value [0.0,0.0,0.5]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:1}] at @s run execute as @e[tag=car] at @s run data modify entity @s Rotation set value [0f,0f]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:3}] at @s run execute as @e[tag=car] at @s run data modify entity @s Motion set value [0.0,0.0,-0.5]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:3}] at @s run execute as @e[tag=car] at @s run data modify entity @s Rotation set value [180f,0f]
+execute as @a[scores={radio=1..}, nbt={SelectedItemSlot:4}] at @s run execute as @e[tag=car] at @s if block ~ ~-1 ~ #blocks run data modify entity @s Motion set value [0.0,0.5,0.0]
+
+#Radio_Reset
+scoreboard players reset @a radio
+
+#Visual_Car
+replaceitem entity @e[tag=car1] weapon.mainhand minecraft:torch{CustomModelData:1}
+replaceitem entity @e[tag=car1] armor.head minecraft:carrot_on_a_stick{CustomModelData:1005}
+
+#Car_Own_Mechanism
+execute as @a store result storage carown:amount list[] int 1 if entity @e[tag=car]
+
+
+
+
+summon armor_stand ~ ~ ~ {Invisible:1, Tags:[car], Silent:1}
+execute as @e[type=armor_stand,tag=car,sort=nearest,limit=1] store result score @s caram if entity @e[tag=car]
+execute store result score @s caram if entity @e[tag=car]
